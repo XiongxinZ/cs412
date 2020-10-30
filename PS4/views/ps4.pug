@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .container
+        table.table
+            thread
+            tr
+                th country
+                th total_cases
+                th tested
+                th death_ratio
+                th recovery_ratio
+        tbody
+            thread
+            tr
+                th #{country}
+                th #{total_cases}
+                th #{tested}
+                th #{death_ratio}
+                th #{recovery_ratio}
+
