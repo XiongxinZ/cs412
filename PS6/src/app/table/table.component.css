@@ -1,0 +1,23 @@
+#users{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%
+}
+
+#weathers td, #users th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#weathers tr:nth-child(even){background-color: #f2f;}
+
+#weathers tr:hover{background-color: #ddd;}
+
+#weathers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: blueviolet;
+  color: white;
+}
+

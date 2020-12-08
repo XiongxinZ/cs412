@@ -31,7 +31,7 @@ city=washington
 POST http://localhost:3000
 Content-Type: application/x-www-form-urlencoded
 
-city=washington
+city=columbus
 
 ###
 POST http://localhost:3000
@@ -97,7 +97,7 @@ city=phoenix
 POST http://localhost:3000
 Content-Type: application/x-www-form-urlencoded
 
-city=celeveland
+city=cleveland
 
 ###
 POST http://localhost:3000

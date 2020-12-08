@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
       cached: true
     };
     res.json(response);
+    // res.render('index', {weather: weatherText, error: null});
     //if not in cache, call the third-party API and then set in cache with city name as key, then return
   } else {
     let url = FETCHCONFIG.geturl(city);
