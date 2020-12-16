@@ -1,0 +1,36 @@
+<h2>HttpClient running in a service</h2>
+
+<button (click)="getWeather()" >Get the weather for Boston</button>
+<br/>
+Current weather: <br/>
+City: {{cityWeather.key}} <br/>
+Weather: {{cityWeather.value}} <br/>
+Cached : {{cityWeather.cached}} <br/>
+<br />
+
+Way 1: use ngModel to bind variables, then call a function from Submit button
+<form (ngSubmit)="getWeatherByCity()">
+  City: <input name="city" [(ngModel)]="city">
+  <button type="submit">Submit</button>
+
+</form>
+
+
+Way 2: Simple FormControls
+<br/>
+City: <input  [formControl]="cityControl2"> : {{city}}<br/>
+<button (click)="getWeatherByCityWay2()">Submit</button>
+<br/>
+
+
+Way 3: FormGroup as a way to contain FormControls
+Note that we're using formControlName here to get to controllers inside the form
+Note that this also works with FormBuilder service (same syntax in HTML)
+
+
+<br/>
+<form [formGroup]="weatherFormGroup" (ngSubmit)="getWeatherByCityWay3()">
+  City: <input  formControlName="cityControl"> : {{city}}<br/>
+  <button type="submit">Submit</button>
+</form>
+<br/>

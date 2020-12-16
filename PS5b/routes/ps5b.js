@@ -3,6 +3,7 @@ const router = express.Router();
 const request = require('request');
 const FETCHCONFIG = require('../config/fetchConfig');
 
+// const cors = require('cors');
 
 const redis = require('redis');
 const client = redis.createClient();
@@ -16,6 +17,8 @@ const asyncExpire = promisify(client.expire).bind(client);
 client.flushdb((err, response) => {
   if (err) { throw new Error('something bad happened when I flushed')}
 });
+
+// router.options('*', cors())
 
 router.get('/', (req, res) => {
   res.render('index', {weather: null, error: null});
@@ -64,7 +67,6 @@ router.post('/', async (req, res) => {
       }
     });
   }
-
 })
 
 module.exports = router;
